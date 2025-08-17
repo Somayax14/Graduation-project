@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Content Management</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      margin: 0;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+    }
+
+    header {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .Current-page {
+      color:#b2ebf2;
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight:initial;
+    }
+
+    nav a:hover {
+      color:#b2ebf2 ;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    main section {
+      flex: 1 1 450px;
+      max-width: 500px;
+      margin: 0;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #27506d;
+      font-size: 1.8em;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #3a4e60;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #2e6d91;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #1e4d68;
+    }
+
+    .article {
+      border-top: 1px solid #e0e6ea;
+      padding: 20px 0;
+    }
+
+    .article:first-of-type {
+      border-top: none;
+    }
+
+    .article-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #244a63;
+    }
+
+    .meta {
+      font-size: 0.95em;
+      color: #667;
+      margin-bottom: 10px;
+    }
+
+    .summary {
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .article-actions {
+      margin-top: 15px;
+    }
+
+    .article-actions .btn {
+      margin-right: 10px;
+      background-color: #647687;
+    }
+
+    .article-actions .btn:hover {
+      background-color: #4a5a68;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Logo.jpg" alt="Logo" class="logo">
+    <nav>
+      <a href="Doctor-home.html">Home</a>
+      <a class="Current-page" href="doctor-content.html">content</a>
+      <a href="Doctor-appointment.html">appointment</a>
+      <a href="Doctor-consultation.html"> consultation</a>
+      <a href="Doctor-event.html">Activities and Events</a>
+      <a href="Doctor-opp.html"> Training & volunteer</a>
+      <a href="Doctor-records.html">Records</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Submit a New Medical Article</h2>
+      <form>
+        <label>Title:</label>
+        <input type="text" placeholder="Enter article title" required>
+
+        <label>Type:</label>
+        <select>
+          <option>Article</option>
+          <option>Workshop</option>
+          <option>Awareness</option>
+        </select>
+
+        <label>Short Description:</label>
+        <input type="text" placeholder="Write a short summary" required>
+
+        <label>Full Content:</label>
+        <textarea rows="5" placeholder="Write the full article..." required></textarea>
+
+        <button type="submit" class="btn">Publish Article</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Previous Articles</h2>
+
+      <div class="article">
+        <div class="article-title">Healthy Heart Habits</div>
+<div class="meta">
+  Type: Awareness | Readers: 124<br>
+  Created: May 1, 2025 | Last Updated: May 5, 2025
+</div>
+<div class="summary">
+  Simple lifestyle changes to improve heart health.
+</div>
+<div class="article-actions">
+  <a href="#" class="btn">Edit</a>
+  <a href="#" class="btn">Delete</a>
+</div>
+</div>
+
+<div class="article">
+<div class="article-title">Managing Diabetes with Diet</div>
+<div class="meta">
+  Type: Article | Readers: 89<br>
+  Created: April 20, 2025 | Last Updated: April 25, 2025
+</div>
+<div class="summary">
+  Learn how food choices impact blood sugar levels.
+</div>
+<div class="article-actions">
+  <a href="#" class="btn">Edit</a>
+  <a href="#" class="btn">Delete</a>
+</div>
+</div>
+
+</section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment - University Online Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+        body {
+            font-family: 'Segoe UI', Tahoma;
+            background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            background-color: #5389A6;
+            padding: 25px;
+            color: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .Current-page {
+            color: #b2ebf2;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: initial;
+        }
+
+        nav a:hover {
+            color: #b2ebf2;
+        }
+    .form-section {
+      background: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-section h2 {
+      text-align: center;
+      color: #5389A6;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #5389A6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #467A93;
+    }
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.box {
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  color: #333;
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+}
+
+.box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5389A6;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 20px;
+  background-color: #f5f9fb;
+}
+.box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn, .action-btn {
+  background-color: #336e7b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-btn:hover, .action-btn:hover {
+  background-color: #285a63;
+}
+
+.appointment-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+
+.footer {
+      background-color: #5389A6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #A6DCEE;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Logo.jpg" alt="Logo" class="logo"/>
+    <nav class="nav-links">
+      <a href="Patient_home.html">Home</a>
+      <a href="Patient-content.html">Content</a>
+      <a class="Current-page" href="patient-appointments.html">Appointments</a>
+      <a href="Patient-consultation.html">Consultation</a>
+      <a href="Patient-event.html">Activities and Events</a>
+      <a href="Patient-oppo.HTML">Training & Volunteer</a>
+      <a href="patient-review.html">Review</a>
+    </nav>
+  </header>
+
+
+<div class="main-content">
+    <!-- Booking Section -->
+    <div class="box">
+      <h2>Book Appointment</h2>
+      <form>
+        <label for="College">Select College:</label>
+        <select id="College" required>
+          <option value="">--Choose--</option>
+          <option value="Academic">Academic Complex</option>
+          <option value="College">Scientific College</option>
+        </select>
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" required>
+          <option value="">--Choose--</option>
+          <option value="Dr.Noura">Dr. Noura
+          <option value="Dr.Sara">Dr. Sara</option>
+        </select>
+        <label for="reason">Reason:</label>
+    <textarea id="reason" rows="2" required></textarea>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" required />
+
+    <button type="submit" class="submit-btn">Book</button>
+  </form>
+</div>
+<!-- Upcoming Appointments -->
+<div class="box">
+  <h2>Upcoming Appointments</h2>
+  <div class="appointment-item">
+    <p><strong>Dr. Noura</strong> | 2025-04-25 | Monday</p>
+    <p>Reason: Checkup</p>
+    <button class="action-btn">Reschedule</button>
+    <button class="action-btn">Cancel</button>
+  </div>
+  <div class="appointment-item">
+    <p><strong>Dr. Sara</strong> | 2025-04-28 | Thursday</p>
+    <p>Reason: Consultation</p>
+    <button class="action-btn">Reschedule</button>
+    <button class="action-btn">Cancel</button>
+  </div>
+  <div class="appointment-item">
+    <p><strong>Dr. Noura</strong> | 2025-05-01 | Sunday</p>
+    <p>Reason: Follow-up</p>
+    <button class="action-btn">Reschedule</button>
+    <button class="action-btn">Cancel</button>
+  </div>
+</div>
+
+<!-- Past Appointments -->
+<div class="box">
+  <h2>Past Appointments</h2>
+  <div class="appointment-item">
+    <p><strong>Dr. Sara</strong> | 2025-04-01 | Monday</p>
+    <p>Reason: Fever | <em>Attended</em></p>
+  </div>
+  <div class="appointment-item">
+    <p><strong>Dr. Noura</strong> | 2025-03-15 | Wednesday</p>
+    <p>Reason: Routine | <em>Missed</em></p>
+  </div>
+  <div class="appointment-item">
+    <p><strong>Dr. Sara</strong> | 2025-03-01 | Saturday</p>
+    <p>Reason: Lab Test | <em>Attended</em></p>
+  </div>
+</div>
+</div>
+
+<footer class="footer">
+  <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVR4nO2WXWgVRxTHN9oPoQjCTXbmbAKKhpDcmtomYDX1ztwkhqThGqx0mybVJk3QCiF+oNxLP2Js2ia3oXp3k1BpYr9portp+1LEJykIGkWhKIg+RFsINahPsVI/kpwys7vpkgfhxk2eemC48N+985v/7JxzRlH+jzmEppWHACJvUco/BODbs7I4VeYzCOErCPDvKPCHFDj6xkMC/D1FUTIChwKwHRTYXQEiwG9R4H0EIs0UWDcFPiEXQNlAkPAMSlmPBFL+gAA/SEjFc/4XKGUFhLIxB873B0KllCed7WTjqsrX+Z/hz70htMxWtMwfzne3DQJEH4kFPLFrSvlexym7I1zNANvbF6FtJtAyJ9A20RtFBVWYnR2d0nV98ZyhqhYtp8CnKbC//U4dl8YJP1CM4fh+edA2vbIF0TZ65gQNhUqWEmB/uN9Mn4H++Hkm2ubV2dDRLz7BVSvKhVs899kBRx8+vDJtMAH+pXtKhzxtr/529tmutssebNoy8MFQCm9+lcTS4hrp9lDzzv8WZPUWpgWlNMLcLR4XhcLRNmQVh6smQIviWH+XnDihv4OaFp3J5a0ba3HKMjzwmXTNZlBgI2IiFXidJ65dXX1JaE1V9TOTf79nN5a8EEP20iZMNr6L94cOu1DjLg715qVFVTVW4xQIdsFLiUhRrEVokRdjvsnFVpoX0TJHZ33vKbTM19N1qxBgv0kw4TFH4U+tyauU1Wok2eYHJLz/4E/GarSMOFqGicMplj6UlD7vVqdriqIsElpTZd1uodWWvuF3+m3akz8uCLCP3W2Oe9quzdtGhWbH93ng2/hLapkSZFDKfpeHSt0g8w8ts/hAfbM8seJ39hYHEqFQyVIKbJICu+FpaJvG9SOdmL+qQsLjeuP0+MCnJFBwTk5ZtuyplPX7avGYcHnF7MA1+ZVuvrJuJehQ1TISDoefkWCrZ60/TW4c6cRwbgWCxifFe8p8BdpGw+x63FKzVboeaGntDvyGoWp8owv+yA+dPG7gy4XVKErmX0e7ptFK1QaELX7auUexm7m5Vc+iZfT5wb9+kJBua6O6p50OCKyIpn/M7UiD418nuzyoqM3V6zdL8KmO970icjIwsKqWEZFOApCTE723vboe+1tasaHiTQl9dd1rshW64PTr8eMCgGeKXkwov+e/voouJE62uwtXRbop8xHLl/MlelRvONS8888TbQn8Z9DXleyeLcpCBFqp9WgbnWgb36CVqlkQaJDxL8bPWHXkVfSxAAAAAElFTkSuQmCC" alt="phone-disconnected"> +966 5XXXXXXX | <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="mail"> <a href="mailto:contact@mycollagedoctor.com">contact@mycollagedoctor.com</a></p>
+</footer>
+
+</body>
+</html>

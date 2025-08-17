@@ -1,0 +1,397 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book an Appointment</title>
+  <style>
+        body {
+            font-family: 'Segoe UI', Tahoma;
+            background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            background-color: #5389A6;
+            padding: 25px;
+            color: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .Current-page {
+            color: #b2ebf2;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: initial;
+        }
+
+        nav a:hover {
+            color: #b2ebf2;
+        }
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.box {
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  color: #333;
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+}
+
+.box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5389A6;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 20px;
+  background-color: #f5f9fb;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn, .action-btn {
+  background-color: #336e7b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-btn:hover, .action-btn:hover {
+  background-color: #285a63;
+}
+
+.appointment-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+footer {
+  background-color: #5389A6;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid #b2ebf2;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo.jpg" alt="Logo" class="logo"/>
+    <nav class="nav-links">
+      <a href="patient_home.html">Home</a>
+      <a href="Patient-content.html">Content</a>
+      <a href="Patient-Appointments.html">Appointments</a>
+      <a class="Current-page" href="Patient-consultation.html">Consultation</a>
+      <a href="Patient-event.html">Activities and Events</a>
+      <a href="Patient-oppo.HTML">Training & Volunteer</a>
+      <a href="patient-review.html">Review</a>
+    </nav>
+  </header>
+  <div class="main-content">
+    <!-- Booking Section -->
+    <div class="box">
+        <h2>Medical Inquiry</h2>
+        <form>
+          <!-- Name (Optional) -->
+          <label for="name">Name (Optional):</label>
+          <input type="text" id="name" placeholder="Your name..." />
+      
+         <!-- University ID (Required) -->
+<label for="patient-id">University ID (Required):</label>
+<input type="text" id="patient-id" placeholder="e.g., 123456789" required 
+  pattern="^(?!\d{9}$|\d{9})\d{9}$" 
+  title="University ID must be exactly 9 digits and cannot be all the same digit." />
+
+      
+          <!-- Email (Required) -->
+          <label for="email">Email (Required):</label>
+          <input type="email" id="email" placeholder="example@email.com" required />
+      
+          <!-- Medical Inquiry (Reason) -->
+          <label for="reason">Medical Inquiry:</label>
+          <textarea id="reason" rows="2" required placeholder="Describe your medical inquiry..."></textarea>
+      
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Submit Inquiry</button>
+        </form>
+      </div>
+<!-- Live Chat -->
+<div class="box">
+    <h2>Live Chat</h2>
+    <p style="font-weight: bold; margin-bottom: 6px;">Choose your doctor</p>
+  
+    <!-- خط أبيض رفيع -->
+    <hr style="border: none; height: 1px; background-color: white; margin-bottom: 14px;" />
+  
+    <!-- قائمة الأطباء بنفس ستايل مربع الاسم -->
+    <div class="form-group">
+      <select id="doctor" style="
+        height: 42px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #A6DCEE;
+        font-size: 15px;
+        box-sizing: border-box;
+        width: 100%;
+      ">
+        <option value="">Select doctor</option>
+        <option>Dr. A. Smith (Online)</option>
+        <option>Dr. J. Lee (Online)</option>
+        <option>Dr. M. Kim (Offline)</option>
+      </select>
+    </div>
+  
+    <!-- زر المحادثة -->
+    <div class="form-group" style="margin-top: 20px;">
+      <button type="submit" class="submit-btn" style="
+        width: 100%;
+        background-color: #5389A6;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        height: 42px;
+      "
+      onmouseover="this.style.backgroundColor='#3b6d87'" 
+      onmouseout="this.style.backgroundColor='#5389A6'"
+      onclick="alert('Chat started with the selected doctor.')">
+        Start Chat
+      </button>
+    </div>
+</div>
+<!-- Remote Consultation -->
+<div class="box">
+    <h2>Remote Consultation</h2>
+    
+    <!-- مسافة بين العنوان والمربع -->
+    <div style="margin-bottom: 20px;"></div>
+    
+    <!-- نوع الاستشارة -->
+    <div class="form-group">
+      <label for="consultation-type">Consultation Type</label>
+      <select id="consultation-type" style="
+        height: 42px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #A6DCEE;
+        font-size: 15px;
+        box-sizing: border-box;
+        width: 100%;
+      ">
+        <option value="">Select Consultation Type</option>
+        <option value="General">General</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Follow-up">Follow-up</option>
+      </select>
+    </div>
+    
+    <!-- مسافة بين المربع والزر -->
+    <div style="margin-bottom: 20px;"></div>
+    
+    
+    
+
+
+      <div class="form-group">
+        <label for="consultation-date">Appointment Date</label>
+        <input type="date" id="appointment-date" required style="
+           height: 42px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #A6DCEE;
+        font-size: 15px;
+        box-sizing: border-box;
+        width: 100%;
+        ">
+      </div>
+    
+    <!-- مسافة بين الوقت والزر -->
+    <div style="margin-bottom: 20px;"></div>
+    
+    <!-- زر التقديم -->
+    <div class="form-group">
+      <button onclick="alert('Consultation request submitted')" style="
+        width: 100%;
+        background-color: #5389A6;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+      onmouseover="this.style.backgroundColor='#3b6d87'" 
+      onmouseout="this.style.backgroundColor='#5389A6'">
+        Submit Request
+      </button>
+    </div>
+    <hr style="border: none; height: 1.2px; background-color: rgb(255, 255, 255); margin-bottom: 20px;" />
+   <!-- Video Consultation -->
+<div class="card">
+    <h2 style="margin-bottom: 16px;">Video Consultation</h2>
+  
+    <!-- Light white line -->
+    <hr style="border: none; height: 1.2px; background-color: rgb(242, 244, 247); margin-bottom: 20px;" />
+  
+    <!-- Start consultation button -->
+    <div class="form-group">
+      <button style="
+        width: 100%;
+        background-color: #5389A6;
+        color: rgb(242, 245, 247);
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+      onmouseover="this.style.backgroundColor='#3b6d87'" 
+      onmouseout="this.style.backgroundColor='#5389A6'"
+      onclick="startVideoNow()">
+        Video Consultation - Start Now!
+      </button>
+    </div>
+
+
+    
+  </div>
+
+  
+  
+  <script>
+    function startVideoNow() {
+      alert("Starting the video consultation...");
+      // You can replace the link below with the actual video call link
+      window.open("https://example.com/video-call", "_blank");
+    }
+  </script>
+  
+  
+  </div>
+  
+  <!-- Current Consultations Section -->
+<div class="box">
+  <h2>Current Consultations</h2>
+
+  <!-- Open Consultations -->
+  <div class="appointment-item">
+    <h3 style="color: #336e7b;">Open Consultation</h3>
+    <p>Topic: General Health | Doctor: Dr. A. Smith</p>
+    <button class="action-btn" style="background-color: #4CAF50;">Join Now</button>
+  </div>
+
+  <!-- Divider -->
+  <hr style="margin: 20px 0; border: none; height: 1px; background-color: #ccc;" />
+
+  <!-- Upcoming Consultations -->
+  <div class="appointment-item">
+    <h3 style="color: #336e7b;">Upcoming Consultation</h3>
+    <p>Topic: Mental Health | Scheduled: 2025-05-12 at 4:00 PM</p>
+    <button class="action-btn" style="background-color: #f0ad4e;">Get Notified</button>
+  </div>
+</div>
+    </div>
+
+    
+  </div>
+  
+  
+
+  <footer class="footer">
+    <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVR4nO2WXWgVRxTHN9oPoQjCTXbmbAKKhpDcmtomYDX1ztwkhqThGqx0mybVJk3QCiF+oNxLP2Js2ia3oXp3k1BpYr9portp+1LEJykIGkWhKIg+RFsINahPsVI/kpwys7vpkgfhxk2eemC48N+985v/7JxzRlH+jzmEppWHACJvUco/BODbs7I4VeYzCOErCPDvKPCHFDj6xkMC/D1FUTIChwKwHRTYXQEiwG9R4H0EIs0UWDcFPiEXQNlAkPAMSlmPBFL+gAA/SEjFc/4XKGUFhLIxB873B0KllCed7WTjqsrX+Z/hz70htMxWtMwfzne3DQJEH4kFPLFrSvlexym7I1zNANvbF6FtJtAyJ9A20RtFBVWYnR2d0nV98ZyhqhYtp8CnKbC//U4dl8YJP1CM4fh+edA2vbIF0TZ65gQNhUqWEmB/uN9Mn4H++Hkm2ubV2dDRLz7BVSvKhVs899kBRx8+vDJtMAH+pXtKhzxtr/529tmutssebNoy8MFQCm9+lcTS4hrp9lDzzv8WZPUWpgWlNMLcLR4XhcLRNmQVh6smQIviWH+XnDihv4OaFp3J5a0ba3HKMjzwmXTNZlBgI2IiFXidJ65dXX1JaE1V9TOTf79nN5a8EEP20iZMNr6L94cOu1DjLg715qVFVTVW4xQIdsFLiUhRrEVokRdjvsnFVpoX0TJHZ33vKbTM19N1qxBgv0kw4TFH4U+tyauU1Wok2eYHJLz/4E/GarSMOFqGicMplj6UlD7vVqdriqIsElpTZd1uodWWvuF3+m3akz8uCLCP3W2Oe9quzdtGhWbH93ng2/hLapkSZFDKfpeHSt0g8w8ts/hAfbM8seJ39hYHEqFQyVIKbJICu+FpaJvG9SOdmL+qQsLjeuP0+MCnJFBwTk5ZtuyplPX7avGYcHnF7MA1+ZVuvrJuJehQ1TISDoefkWCrZ60/TW4c6cRwbgWCxifFe8p8BdpGw+x63FKzVboeaGntDvyGoWp8owv+yA+dPG7gy4XVKErmX0e7ptFK1QaELX7auUexm7m5Vc+iZfT5wb9+kJBua6O6p50OCKyIpn/M7UiD418nuzyoqM3V6zdL8KmO970icjIwsKqWEZFOApCTE723vboe+1tasaHiTQl9dd1rshW64PTr8eMCgGeKXkwov+e/voouJE62uwtXRbop8xHLl/MlelRvONS8888TbQn8Z9DXleyeLcpCBFqp9WgbnWgb36CVqlkQaJDxL8bPWHXkVfSxAAAAAElFTkSuQmCC" alt="phone-disconnected"> +966 5XXXXXXX | <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="mail"> <a href="mailto:contact@mycollagedoctor.com">contact@mycollagedoctor.com</a></p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

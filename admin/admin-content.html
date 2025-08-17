@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Articles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    header {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .Current-page {
+      color: #b2ebf2;
+    }
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: initial;
+    }
+
+    nav a:hover {
+      color: #b2ebf2;
+    }
+
+    .articles-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 1000px;
+      margin: 30px auto;
+      max-height: 500px;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    h2 {
+      color: #5389A6;
+      margin-bottom: 20px;
+    }
+
+    .article-item {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .article-item h3 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .article-item p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .doctor-info {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #e0edf3;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .doctor-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .publish-btn, .delete-btn {
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .publish-btn {
+      background-color: #4CAF50;
+    }
+
+    .delete-btn {
+      background-color: #f44336;
+    }
+
+    .publish-btn:hover {
+      background-color: #45a049;
+    }
+
+    .delete-btn:hover {
+      background-color: #d32f2f;
+    }
+
+    .footer {
+      background-color: #5389A6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #A6DCEE;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Logo.jpg" alt="Logo" class="logo">
+  
+  <nav>
+    <a href="admin-home.html">Home</a>
+    <a href="account-managment.html">Account Management</a>
+    <a class="Current-page" href="admin-content.html">Content</a>
+    <a  href="admin-event.html">Activities and Events</a>
+    <a href="admin-opp.html">Training & Volunteer</a>
+    <a href="System-setting.html">System Settings</a>
+  </nav>
+</header>
+
+<div class="articles-container">
+  <h2>Manage Articles</h2>
+
+  <div class="article-item">
+    <h3>Importance of Regular Health Checkups</h3>
+    <p><strong>Description:</strong> Regular health checkups can help detect early signs of health problems and prevent serious illnesses.</p>
+    <p><strong>Doctor:</strong> Dr. Sarah Al-Fahad</p>
+    <p><strong>Submission Date:</strong> 2025-05-10</p>
+    <div class="doctor-info">
+      <div>By: Dr. Sarah Al-Fahad</div>
+      <div class="doctor-buttons">
+        <button class="publish-btn">Publish</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-item">
+    <h3>Managing Stress in Daily Life</h3>
+    <p><strong>Description:</strong> Tips and strategies to reduce stress and improve mental health in busy lives.</p>
+    <p><strong>Doctor:</strong> Dr. Noura Al-Hamdan</p>
+<p><strong>Submission Date:</strong> 2025-05-12</p>
+    <div class="doctor-info">
+      <div>By: Dr. Noura Al-Hamdan</div>
+      <div class="doctor-buttons">
+        <button class="publish-btn">Publish</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVR4nO2WXWgVRxTHN9oPoQjCTXbmbAKKhpDcmtomYDX1ztwkhqThGqx0mybVJk3QCiF+oNxLP2Js2ia3oXp3k1BpYr9portp+1LEJykIGkWhKIg+RFsINahPsVI/kpwys7vpkgfhxk2eemC48N+985v/7JxzRlH+jzmEppWHACJvUco/BODbs7I4VeYzCOErCPDvKPCHFDj6xkMC/D1FUTIChwKwHRTYXQEiwG9R4H0EIs0UWDcFPiEXQNlAkPAMSlmPBFL+gAA/SEjFc/4XKGUFhLIxB873B0KllCed7WTjqsrX+Z/hz70htMxWtMwfzne3DQJEH4kFPLFrSvlexym7I1zNANvbF6FtJtAyJ9A20RtFBVWYnR2d0nV98ZyhqhYtp8CnKbC//U4dl8YJP1CM4fh+edA2vbIF0TZ65gQNhUqWEmB/uN9Mn4H++Hkm2ubV2dDRLz7BVSvKhVs899kBRx8+vDJtMAH+pXtKhzxtr/529tmutssebNoy8MFQCm9+lcTS4hrp9lDzzv8WZPUWpgWlNMLcLR4XhcLRNmQVh6smQIviWH+XnDihv4OaFp3J5a0ba3HKMjzwmXTNZlBgI2IiFXidJ65dXX1JaE1V9TOTf79nN5a8EEP20iZMNr6L94cOu1DjLg715qVFVTVW4xQIdsFLiUhRrEVokRdjvsnFVpoX0TJHZ33vKbTM19N1qxBgv0kw4TFH4U+tyauU1Wok2eYHJLz/4E/GarSMOFqGicMplj6UlD7vVqdriqIsElpTZd1uodWWvuF3+m3akz8uCLCP3W2Oe9quzdtGhWbH93ng2/hLapkSZFDKfpeHSt0g8w8ts/hAfbM8seJ39hYHEqFQyVIKbJICu+FpaJvG9SOdmL+qQsLjeuP0+MCnJFBwTk5ZtuyplPX7avGYcHnF7MA1+ZVuvrJuJehQ1TISDoefkWCrZ60/TW4c6cRwbgWCxifFe8p8BdpGw+x63FKzVboeaGntDvyGoWp8owv+yA+dPG7gy4XVKErmX0e7ptFK1QaELX7auUexm7m5Vc+iZfT5wb9+kJBua6O6p50OCKyIpn/M7UiD418nuzyoqM3V6zdL8KmO970icjIwsKqWEZFOApCTE723vboe+1tasaHiTQl9dd1rshW64PTr8eMCgGeKXkwov+e/voouJE62uwtXRbop8xHLl/MlelRvONS8888TbQn8Z9DXleyeLcpCBFqp9WgbnWgb36CVqlkQaJDxL8bPWHXkVfSxAAAAAElFTkSuQmCC" alt="phone-disconnected"> +966 5XXXXXXX | <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="mail"> <a href="mailto:contact@mycollagedoctor.com">contact@mycollagedoctor.com</a></p>
+</footer>
+</body>
+</html>

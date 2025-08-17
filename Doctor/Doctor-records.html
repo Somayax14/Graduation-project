@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patient Records</title>
+  <style>
+     body {
+      font-family: 'Segoe UI', Tahoma;
+      margin: 0;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+    }
+
+    header {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .Current-page {
+      color:#b2ebf2;
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight:initial;
+    }
+
+    nav a:hover {
+      color:#b2ebf2 ;
+    }
+
+
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      color: #333;
+      margin: 40px 0 25px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 30px 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 25px 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+      border-left: 6px solid #5389A6;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #2C3E50;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #444;
+      font-size: 15px;
+      margin: 5px 0;
+    }
+
+    .status-label {
+      margin-top: 12px;
+      display: inline-block;
+      background-color: #dfeff5;
+      color: #2c3e50;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      border-left: 4px solid #5389A6;
+    }
+
+    .view-btn {
+      margin-top: 15px;
+      background-color: #5389A6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .view-btn:hover {
+      background-color: #41738d;
+    }
+
+    .footer {
+      background-color: #5389A6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #A6DCEE;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Logo.jpg" alt="Logo" class="logo">
+    <nav>
+      <a href="Doctor-home.html">Home</a>
+      <a  href="doctor-content.html">content</a>
+      <a  href="Doctor-appointment.html">appointment</a>
+      <a href="Doctor-consultation.html"> consultation</a>
+      <a href="Doctor-event.html">Activities and Events</a>
+      <a href="Doctor-opp.html"> Training & volunteer</a>
+      <a class="Current-page" href="Doctor-records.html">Records</a>
+    </nav>
+  </header>
+
+  <h2> Patient Records</h2>
+
+  <div class="container">
+    <!-- 10 patient cards -->
+    <div class="card">
+      <h3>Sarah Alzahrani</h3>
+      <p><strong>Age:</strong> 19</p>
+      <p><strong>Gender:</strong> Female</p>
+      <p><strong>Record ID:</strong> P001</p>
+      <p><strong>Visits:</strong> 5</p>
+      <p><strong>Health Status:</strong> Stable</p>
+      <button class="view-btn">View Record</button>
+    </div>
+
+    <div class="card">
+      <h3>Fatima Alharbi</h3>
+      <p><strong>Age:</strong> 21</p>
+      <p><strong>Gender:</strong> Female</p>
+      <p><strong>Record ID:</strong> P002</p>
+      <p><strong>Visits:</strong> 3</p>
+      <p><strong>Health Status:</strong> Needs Monitoring</p>
+      <button class="view-btn">View Record</button>
+    </div>
+<div class="card">
+  <h3>Layan Asiri</h3>
+  <p><strong>Age:</strong> 22</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P003</p>
+  <p><strong>Visits:</strong> 2</p>
+  <p><strong>Health Status:</strong> Improving</p>
+  <button class="view-btn">View Record</button>
+</div>
+
+<div class="card">
+  <h3>Noor Alqahtani</h3>
+  <p><strong>Age:</strong> 20</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P004</p>
+  <p><strong>Visits:</strong> 4</p>
+  <p><strong>Health Status:</strong> Under Treatment</p>
+  <button class="view-btn">View Record</button>
+</div>
+
+<div class="card">
+  <h3>Maha Alshahrani</h3>
+  <p><strong>Age:</strong> 29</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P005</p>
+  <p><strong>Visits:</strong> 7</p>
+  <p><strong>Health Status:</strong> Critical</p>
+  <button class="view-btn">View Record</button>
+</div>
+
+<div class="card">
+  <h3>Reem Alotaibi</h3>
+  <p><strong>Age:</strong> 34</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P006</p>
+  <p><strong>Visits:</strong> 6</p>
+  <p><strong>Health Status:</strong> Stable</p>
+  <button class="view-btn">View Record</button>
+</div>
+
+<div class="card">
+  <h3>Wafa Alshehri</h3>
+  <p><strong>Age:</strong> 24</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P007</p>
+  <p><strong>Visits:</strong> 3</p>
+  <p><strong>Health Status:</strong> Good</p>
+  <button class="view-btn">View Record</button>
+</div>
+
+<div class="card">
+  <h3>Huda Almutairi</h3>
+  <p><strong>Age:</strong> 30</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P008</p>
+  <p><strong>Visits:</strong> 8</p>
+  <p><strong>Health Status:</strong> Recovering</p>
+  <button class="view-btn">View Record</button>
+</div>
+
+<div class="card">
+  <h3>Noura Alghamdi</h3>
+  <p><strong>Age:</strong> 26</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P009</p>
+  <p><strong>Visits:</strong> 2</p>
+  <p><strong>Health Status:</strong> Stable</p>
+  <button class="view-btn">View Record</button>
+</div>
+
+<div class="card">
+  <h3>Dalal Alsubaie</h3>
+  <p><strong>Age:</strong> 35</p>
+  <p><strong>Gender:</strong> Female</p>
+  <p><strong>Record ID:</strong> P010</p>
+  <p><strong>Visits:</strong> 10</p>
+  <p><strong>Health Status:</strong> Needs Follow-up</p>
+  <button class="view-btn">View Record</button>
+</div>
+</div>
+
+<footer class="footer">
+  <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVR4nO2WXWgVRxTHN9oPoQjCTXbmbAKKhpDcmtomYDX1ztwkhqThGqx0mybVJk3QCiF+oNxLP2Js2ia3oXp3k1BpYr9portp+1LEJykIGkWhKIg+RFsINahPsVI/kpwys7vpkgfhxk2eemC48N+985v/7JxzRlH+jzmEppWHACJvUco/BODbs7I4VeYzCOErCPDvKPCHFDj6xkMC/D1FUTIChwKwHRTYXQEiwG9R4H0EIs0UWDcFPiEXQNlAkPAMSlmPBFL+gAA/SEjFc/4XKGUFhLIxB873B0KllCed7WTjqsrX+Z/hz70htMxWtMwfzne3DQJEH4kFPLFrSvlexym7I1zNANvbF6FtJtAyJ9A20RtFBVWYnR2d0nV98ZyhqhYtp8CnKbC//U4dl8YJP1CM4fh+edA2vbIF0TZ65gQNhUqWEmB/uN9Mn4H++Hkm2ubV2dDRLz7BVSvKhVs899kBRx8+vDJtMAH+pXtKhzxtr/529tmutssebNoy8MFQCm9+lcTS4hrp9lDzzv8WZPUWpgWlNMLcLR4XhcLRNmQVh6smQIviWH+XnDihv4OaFp3J5a0ba3HKMjzwmXTNZlBgI2IiFXidJ65dXX1JaE1V9TOTf79nN5a8EEP20iZMNr6L94cOu1DjLg715qVFVTVW4xQIdsFLiUhRrEVokRdjvsnFVpoX0TJHZ33vKbTM19N1qxBgv0kw4TFH4U+tyauU1Wok2eYHJLz/4E/GarSMOFqGicMplj6UlD7vVqdriqIsElpTZd1uodWWvuF3+m3akz8uCLCP3W2Oe9quzdtGhWbH93ng2/hLapkSZFDKfpeHSt0g8w8ts/hAfbM8seJ39hYHEqFQyVIKbJICu+FpaJvG9SOdmL+qQsLjeuP0+MCnJFBwTk5ZtuyplPX7avGYcHnF7MA1+ZVuvrJuJehQ1TISDoefkWCrZ60/TW4c6cRwbgWCxifFe8p8BdpGw+x63FKzVboeaGntDvyGoWp8owv+yA+dPG7gy4XVKErmX0e7ptFK1QaELX7auUexm7m5Vc+iZfT5wb9+kJBua6O6p50OCKyIpn/M7UiD418nuzyoqM3V6zdL8KmO970icjIwsKqWEZFOApCTE723vboe+1tasaHiTQl9dd1rshW64PTr8eMCgGeKXkwov+e/voouJE62uwtXRbop8xHLl/MlelRvONS8888TbQn8Z9DXleyeLcpCBFqp9WgbnWgb36CVqlkQaJDxL8bPWHXkVfSxAAAAAElFTkSuQmCC" alt="phone-disconnected"> +966 5XXXXXXX | <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="mail"> <a href="mailto:contact@mycollagedoctor.com">contact@mycollagedoctor.com</a></p>
+</footer>
+
+</body>
+</html>

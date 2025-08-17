@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurse Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .main-h {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    
+    .co{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .auth-button {
+  background-color: #c24949; /* اللون الأخضر */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+      padding: 10px;
+      margin-right: 40px;
+
+}
+
+.auth-button:hover {
+  background-color: #9b3434; /* تغيير اللون عند التمرير */
+}
+
+
+.Current-page {
+  color:#b2ebf2;
+}
+    .Logo{
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight:initial;
+    }
+
+    nav a:hover {
+      color:#b2ebf2 ;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #5389A6;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section h3 {
+      color: #5389A6;
+      border-left: 4px solid #5389A6;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .actions button {
+      background-color: #5389A6;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .actions button:hover {
+      background-color: #3f7088;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .toggle-section {
+      margin-top: 20px;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+
+    .footer {
+      background-color: #5389A6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #A6DCEE;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  
+    <header class="main-h">
+        <img src="logo.jpg" alt="Logo" class="Logo"/>
+        <nav class="nav-links">
+        <a class="Current-page" href="Nurse-home.html">Home</a>
+        <a href="Nurse-content.html">Content</a>
+        <a  href="Nurse-appointments.html">Appointments</a>
+        <a href="Nurse-consultation.html">Consultation</a>
+        <a  href="Nurse-event.html">Activities and Events </a>
+        <a href="Nurse-opp.html"> Training and volunteer Opportunities</a>
+    
+        </nav> 
+            <div class="co">
+<a href="/login.html"> <button class="auth-button" id="logoutButton">Logout</button>
+</a>
+</div>
+    </header>
+
+
+  <div class="container">
+    <h2>Lian Alhazmi - Psychological Clinic</h2>
+
+    <div class="section">
+      <h3>Personal Information</h3>
+      <ul>
+        <li><strong>Employee ID:</strong> 20451</li>
+        <li><strong>Gender:</strong> Female</li>
+        <li><strong>Phone:</strong> +966558899112</li>
+        <li><strong>Email:</strong> lian@univclinic.edu.sa</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Work Information</h3>
+      <ul>
+        <li><strong>Department:</strong> Psychological Clinic</li>
+        <li><strong>Supervising Doctor:</strong> Dr. Sarah Alshahrani</li>
+        <li><strong>Appointments Assisted:</strong> 12</li>
+        <li><strong>Current Tasks:</strong> Evaluation preparation, Documentation, Session prep</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Quick Actions</h3>
+      <div class="actions">
+        <button onclick="toggleSection('students')">View Assigned Students</button>
+        <button onclick="toggleSection('followups')">View Follow-ups</button>
+        <button onclick="toggleSection('consultations')">View Consultations</button>
+        <button onclick="toggleSection('edit')">Edit Profile</button>
+      </div>
+    </div>
+
+    <div id="students" class="toggle-section hidden">
+      <h4>Assigned Students</h4>
+      <ul>
+        <li>Razan Ali - Session at 10:00 AM</li>
+        <li>Nouf Alghamdi - Session at 1:00 PM</li>
+        <li>Huda Alzahrani - Evaluation</li>
+      </ul>
+    </div>
+<div id="followups" class="toggle-section hidden">
+    <h4>Follow-ups</h4>
+    <ul>
+      <li>Update student reports</li>
+      <li>Call guardians for feedback</li>
+      <li>Schedule next week’s sessions</li>
+    </ul>
+  </div>
+
+  <div id="consultations" class="toggle-section hidden">
+    <h4>Consultations</h4>
+    <ul>
+      <li>Consultation with Dr. Sarah - 11:00 AM</li>
+      <li>Team case review - 3:00 PM</li>
+    </ul>
+  </div>
+
+  <div id="edit" class="toggle-section hidden">
+    <h4>Edit Profile</h4>
+    <p>To edit your profile, please contact the HR department or submit a request via the internal portal.</p>
+  </div>
+
+</div>
+<footer class="footer">
+    <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVR4nO2WXWgVRxTHN9oPoQjCTXbmbAKKhpDcmtomYDX1ztwkhqThGqx0mybVJk3QCiF+oNxLP2Js2ia3oXp3k1BpYr9portp+1LEJykIGkWhKIg+RFsINahPsVI/kpwys7vpkgfhxk2eemC48N+985v/7JxzRlH+jzmEppWHACJvUco/BODbs7I4VeYzCOErCPDvKPCHFDj6xkMC/D1FUTIChwKwHRTYXQEiwG9R4H0EIs0UWDcFPiEXQNlAkPAMSlmPBFL+gAA/SEjFc/4XKGUFhLIxB873B0KllCed7WTjqsrX+Z/hz70htMxWtMwfzne3DQJEH4kFPLFrSvlexym7I1zNANvbF6FtJtAyJ9A20RtFBVWYnR2d0nV98ZyhqhYtp8CnKbC//U4dl8YJP1CM4fh+edA2vbIF0TZ65gQNhUqWEmB/uN9Mn4H++Hkm2ubV2dDRLz7BVSvKhVs899kBRx8+vDJtMAH+pXtKhzxtr/529tmutssebNoy8MFQCm9+lcTS4hrp9lDzzv8WZPUWpgWlNMLcLR4XhcLRNmQVh6smQIviWH+XnDihv4OaFp3J5a0ba3HKMjzwmXTNZlBgI2IiFXidJ65dXX1JaE1V9TOTf79nN5a8EEP20iZMNr6L94cOu1DjLg715qVFVTVW4xQIdsFLiUhRrEVokRdjvsnFVpoX0TJHZ33vKbTM19N1qxBgv0kw4TFH4U+tyauU1Wok2eYHJLz/4E/GarSMOFqGicMplj6UlD7vVqdriqIsElpTZd1uodWWvuF3+m3akz8uCLCP3W2Oe9quzdtGhWbH93ng2/hLapkSZFDKfpeHSt0g8w8ts/hAfbM8seJ39hYHEqFQyVIKbJICu+FpaJvG9SOdmL+qQsLjeuP0+MCnJFBwTk5ZtuyplPX7avGYcHnF7MA1+ZVuvrJuJehQ1TISDoefkWCrZ60/TW4c6cRwbgWCxifFe8p8BdpGw+x63FKzVboeaGntDvyGoWp8owv+yA+dPG7gy4XVKErmX0e7ptFK1QaELX7auUexm7m5Vc+iZfT5wb9+kJBua6O6p50OCKyIpn/M7UiD418nuzyoqM3V6zdL8KmO970icjIwsKqWEZFOApCTE723vboe+1tasaHiTQl9dd1rshW64PTr8eMCgGeKXkwov+e/voouJE62uwtXRbop8xHLl/MlelRvONS8888TbQn8Z9DXleyeLcpCBFqp9WgbnWgb36CVqlkQaJDxL8bPWHXkVfSxAAAAAElFTkSuQmCC" alt="phone-disconnected"> +966 5XXXXXXX | <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="mail"> <a href="mailto:contact@mycollagedoctor.com">contact@mycollagedoctor.com</a></p>
+  </footer>
+
+
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    section.classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>

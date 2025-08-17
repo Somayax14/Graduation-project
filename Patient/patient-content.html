@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Knowledge Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .Current-page {
+      color: #b2ebf2;
+    }
+
+    .Logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: initial;
+    }
+
+    nav a:hover {
+      color: #b2ebf2;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #5389A6;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h3 {
+      color: #5389A6;
+      margin-bottom: 15px;
+      border-left: 4px solid #5389A6;
+      padding-left: 10px;
+    }
+
+    .card {
+      background: #f9fbfc;
+      border: 1px solid #d1e3ed;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      background: #eef6fa;
+    }
+
+    .card h4 {
+      margin: 0 0 8px;
+      color: #3f7088;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta i {
+      font-size: 16px;
+      color: #5389A6;
+    }
+
+    a.card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+ 
+    .footer {
+      background-color: #5389A6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #A6DCEE;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Logo.jpg" alt="Logo" class="Logo"/>
+  <nav class="nav-links">
+    <a href="patient_home.html">Home</a>
+    <a class="Current-page" href="Patient-content.html">Content</a>
+    <a href="patient-appointments.html">Appointments</a>
+    <a href="patient-consultation.html">Consultation</a>
+    <a href="patient-event.html">Activities and Events</a>
+    <a href="Patient-oppo.HTML">Training & Volunteer</a>
+    <a href="patient-review.html">Review</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Knowledge & Wellness Hub</h2>
+
+  <!-- Health Tips Section -->
+  <div class="section">
+    <h3>Latest Health Tips</h3>
+    <a href="#" class="card">
+      <h4>Managing Chronic Pain at Home</h4>
+      <p>Simple techniques and lifestyle changes to help reduce daily pain.</p>
+      <div class="meta">
+        <span><i class="material-symbols-outlined">calendar_today</i> May 6, 2025</span>
+        <span><i class="material-symbols-outlined">visibility</i> 150 readers</span>
+      </div>
+    </a>
+    <a href="#" class="card">
+      <h4>How to Boost Your Immune System</h4>
+      <p>Discover foods, habits, and exercises that can strengthen your immunity.</p>
+      <div class="meta">
+        <span><i class="material-symbols-outlined">calendar_today</i> May 4, 2025</span>
+        <span><i class="material-symbols-outlined">visibility</i> 173 readers</span>
+      </div>
+    </a>
+  </div>
+<!-- Announcements Section -->
+<div class="section">
+  <h3>Clinic Announcements</h3>
+  <a href="#" class="card">
+    <h4>Free Check-Up Week</h4>
+    <p>All patients are welcome to a free health screening from May 10 to May 15.</p>
+    <div class="meta">
+      <span><i class="material-symbols-outlined">calendar_today</i> May 5, 2025</span>
+      <span><i class="material-symbols-outlined">visibility</i> 295 views</span>
+    </div>
+  </a>
+  <a href="#" class="card">
+    <h4>New Clinic Hours</h4>
+    <p>Our new working hours start from May 8th: 8 AM to 8 PM.</p>
+    <div class="meta">
+      <span><i class="material-symbols-outlined">calendar_today</i> May 3, 2025</span>
+      <span><i class="material-symbols-outlined">visibility</i> 322 views</span>
+    </div>
+  </a>
+</div>
+
+<!-- FAQs Section -->
+<div class="section">
+  <h3>Common Questions</h3>
+  <a href="#" class="card">
+    <h4>How do I book an appointment?</h4>
+    <p>Follow our step-by-step guide to reserve your visit in just minutes.</p>
+    <div class="meta">
+      <span><i class="material-symbols-outlined">calendar_today</i> May 1, 2025</span>
+      <span><i class="material-symbols-outlined">visibility</i> 189 readers</span>
+    </div>
+  </a>
+  <a href="#" class="card">
+    <h4>Can I access my medical history online?</h4>
+    <p>Yes! Learn how to view your past records safely through our portal.</p>
+    <div class="meta">
+      <span><i class="material-symbols-outlined">calendar_today</i> April 30, 2025</span>
+      <span><i class="material-symbols-outlined">visibility</i> 204 readers</span>
+    </div>
+  </a>
+</div>
+</div>
+
+<footer class="footer">
+  <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVR4nO2WXWgVRxTHN9oPoQjCTXbmbAKKhpDcmtomYDX1ztwkhqThGqx0mybVJk3QCiF+oNxLP2Js2ia3oXp3k1BpYr9portp+1LEJykIGkWhKIg+RFsINahPsVI/kpwys7vpkgfhxk2eemC48N+985v/7JxzRlH+jzmEppWHACJvUco/BODbs7I4VeYzCOErCPDvKPCHFDj6xkMC/D1FUTIChwKwHRTYXQEiwG9R4H0EIs0UWDcFPiEXQNlAkPAMSlmPBFL+gAA/SEjFc/4XKGUFhLIxB873B0KllCed7WTjqsrX+Z/hz70htMxWtMwfzne3DQJEH4kFPLFrSvlexym7I1zNANvbF6FtJtAyJ9A20RtFBVWYnR2d0nV98ZyhqhYtp8CnKbC//U4dl8YJP1CM4fh+edA2vbIF0TZ65gQNhUqWEmB/uN9Mn4H++Hkm2ubV2dDRLz7BVSvKhVs899kBRx8+vDJtMAH+pXtKhzxtr/529tmutssebNoy8MFQCm9+lcTS4hrp9lDzzv8WZPUWpgWlNMLcLR4XhcLRNmQVh6smQIviWH+XnDihv4OaFp3J5a0ba3HKMjzwmXTNZlBgI2IiFXidJ65dXX1JaE1V9TOTf79nN5a8EEP20iZMNr6L94cOu1DjLg715qVFVTVW4xQIdsFLiUhRrEVokRdjvsnFVpoX0TJHZ33vKbTM19N1qxBgv0kw4TFH4U+tyauU1Wok2eYHJLz/4E/GarSMOFqGicMplj6UlD7vVqdriqIsElpTZd1uodWWvuF3+m3akz8uCLCP3W2Oe9quzdtGhWbH93ng2/hLapkSZFDKfpeHSt0g8w8ts/hAfbM8seJ39hYHEqFQyVIKbJICu+FpaJvG9SOdmL+qQsLjeuP0+MCnJFBwTk5ZtuyplPX7avGYcHnF7MA1+ZVuvrJuJehQ1TISDoefkWCrZ60/TW4c6cRwbgWCxifFe8p8BdpGw+x63FKzVboeaGntDvyGoWp8owv+yA+dPG7gy4XVKErmX0e7ptFK1QaELX7auUexm7m5Vc+iZfT5wb9+kJBua6O6p50OCKyIpn/M7UiD418nuzyoqM3V6zdL8KmO970icjIwsKqWEZFOApCTE723vboe+1tasaHiTQl9dd1rshW64PTr8eMCgGeKXkwov+e/voouJE62uwtXRbop8xHLl/MlelRvONS8888TbQn8Z9DXleyeLcpCBFqp9WgbnWgb36CVqlkQaJDxL8bPWHXkVfSxAAAAAElFTkSuQmCC" alt="phone-disconnected"> +966 5XXXXXXX | <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="mail"> <a href="mailto:contact@mycollagedoctor.com">contact@mycollagedoctor.com</a></p>
+</footer>
+
+</body>
+</html>

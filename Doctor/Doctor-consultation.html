@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nurse Dashboard - Consultations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      margin: 0;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+    }
+
+    header {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .Current-page {
+      color:#b2ebf2;
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight:initial;
+    }
+
+    nav a:hover {
+      color:#b2ebf2 ;
+    }
+
+
+.container {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.consultation-list {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.consultation {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.consultation:last-child {
+  border-bottom: none;
+}
+
+.consultation strong {
+  color: #5389A6;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="text"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #5389A6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #467b93;
+}
+
+.footer {
+  background-color: #5389A6;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #A6DCEE;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+ 
+  <header>
+    <img src="Logo.jpg" alt="Logo" class="logo">
+    <nav>
+      <a href="Doctor-home.html">Home</a>
+      <a  href="doctor-content.html">content</a>
+      <a href="Doctor-appointment.html">appointment</a>
+      <a class="Current-page" href="Doctor-consultation.html"> consultation</a>
+      <a href="Doctor-event.html">Activities and Events</a>
+      <a href="Doctor-opp.html"> Training & volunteer</a>
+      <a href="Doctor-records.html">Records</a>
+    </nav>
+  </header>
+
+  
+  <div class="container">
+    <div class="consultation-list">
+      <h2>Available Consultations from Doctors</h2>
+      <div class="consultation">
+        <p><strong>Dr. Ahmed Al-Otaibi:</strong> Consultation on an emergency case - <em>2025-04-15</em></p>
+      </div>
+      <div class="consultation">
+        <p><strong>Dr. Nora Al-Malki:</strong> Follow-up for a diabetes patient - <em>2025-04-16</em></p>
+      </div>
+        <div class="consultation">
+    <p><strong>Dr. Hani Al-Mutairi:</strong> Neurology consultation for migraine management - <em>2025-04-17</em></p>
+  </div>
+
+  <div class="consultation">
+    <p><strong>Dr. Areej Al-Dossari:</strong> Pediatric assessment request - <em>2025-04-18</em></p>
+  </div>
+
+  <div class="consultation">
+    <p><strong>Dr. Saad Al-Qahtani:</strong> Consultation for post-surgery recovery plan - <em>2025-04-19</em></p>
+  </div>
+    </div><section>
+  <h2>Open a New Consultation</h2>
+  <form>
+    <label for="title">Consultation Title</label>
+    <input type="text" id="title" name="title" placeholder="Enter consultation title" required>
+
+    <label for="date">Consultation Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <button type="submit">Open Consultation</button>
+  </form>
+</section>
+
+  </div>  <footer class="footer">
+    <p>📞 +966 5XXXXXXX | ✉️ <a href="mailto:contact@myuniversitydoctor.com">contact@myuniversitydoctor.com</a></p>
+  </footer>
+</body>
+</html>

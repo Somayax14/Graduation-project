@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      margin: 0;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+    }
+
+    header {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .Current-page {
+      color:#b2ebf2;
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight:initial;
+    }
+
+    nav a:hover {
+      color:#b2ebf2 ;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .section {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 48%; /* Increased width for each section */
+      min-width: 400px; /* Ensures it remains responsive */
+    }
+
+    .appointment, .nurse {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .appointment-info, .nurse-info {
+      max-width: 75%;
+    }
+
+    .appointment-info small, .nurse-info small {
+      color: #666;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .actions button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .accept { background: #4caf50; color: white; }
+    .reject { background: #f44336; color: white; }
+
+    footer {
+      background-color: #5389A6;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      border-top: 1px solid #b2ebf2;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin: 5px 0 0 15px;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Logo.jpg" alt="Logo" class="logo">
+    <nav>
+      <a href="Doctor-home.html">Home</a>
+      <a  href="doctor-content.html">content</a>
+      <a class="Current-page" href="Doctor-appointment.html">appointment</a>
+      <a href="Doctor-consultation.html"> consultation</a>
+      <a href="Doctor-event.html">Activities and Events</a>
+      <a href="Doctor-opp.html"> Training & volunteer</a>
+      <a href="Doctor-records.html">Records</a>
+    </nav>
+  </header>
+
+
+  <div class="container">
+    <!-- Section 1: Appointment Requests -->
+    <div class="section">
+      <h2>Appointment Requests</h2>
+
+      <div class="appointment">
+        <div class="appointment-info">
+          <strong>Sarah Ahmed Abdullah Al-Qahtani</strong><br>
+          Service: Blood Test | Mode: In-person<br>
+          <small>Thursday, 2025-04-17</small>
+        </div>
+        <div class="actions">
+          <button class="accept">Accept</button>
+          <button class="reject">Reject</button>
+        </div>
+      </div>
+
+      <div class="appointment">
+        <div class="appointment-info">
+          <strong>Monera Ali Saeed Al-Shahrani</strong><br>
+          Service: Consultation | Mode: Online<br>
+          <small>Wednesday, 2025-04-16</small>
+        </div>
+        <div class="actions">
+          <button class="accept">Accept</button>
+          <button class="reject">Reject</button>
+        </div>
+      </div>
+
+      <div class="appointment">
+        <div class="appointment-info">
+          <strong>Fatimah Khalid Al-Saedi</strong><br>
+          Service: X-Ray | Mode: In-person<br>
+          <small>Monday, 2025-04-20</small>
+        </div>
+        <div class="actions">
+          <button class="accept">Accept</button>
+          <button class="reject">Reject</button>
+        </div>
+      </div>
+<div class="appointment">
+        <div class="appointment-info">
+          <strong>Wedad Ahmed Al-Fahad</strong><br>
+          Service: Check-up | Mode: Online<br>
+          <small>Tuesday, 2025-04-21</small>
+        </div>
+        <div class="actions">
+          <button class="accept">Accept</button>
+          <button class="reject">Reject</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Past Appointments -->
+    <div class="section">
+      <h2>Past Appointments</h2>
+
+      <div class="appointment">
+        <div class="appointment-info">
+          <strong>Rania Khalid Hassan Al-Mutairi</strong><br>
+          Service: Follow-up | Mode: In-person<br>
+          <small>Tuesday, 2025-04-15 - Attended</small>
+        </div>
+      </div>
+
+      <div class="appointment">
+        <div class="appointment-info">
+          <strong>Laila Saud Fahd Al-Otaibi</strong><br>
+          Service: Physical Therapy | Mode: Online<br>
+          <small>Monday, 2025-04-14 - Canceled</small>
+        </div>
+      </div>
+
+      <div class="appointment">
+        <div class="appointment-info">
+          <strong>Yusra Ali Shams</strong><br>
+          Service: Blood Donation | Mode: In-person<br>
+          <small>Sunday, 2025-04-13 - Attended</small>
+        </div>
+      </div>
+
+      <div class="appointment">
+        <div class="appointment-info">
+          <strong>Jamila Khalid Abdulrahman</strong><br>
+          Service: Ultrasound | Mode: Online<br>
+          <small>Saturday, 2025-04-12 - Canceled</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Nurse Assistance -->
+    <div class="section">
+      <h2>Nurse Assistance & Appointments</h2>
+
+      <div class="nurse">
+        <div class="nurse-info">
+          <strong>Fatin Abdullah Nasser Al-Harbi</strong><br>
+          <small>Appointments Helped With:</small>
+          <ul>
+            <li>Vaccination - Friday, 2025-04-18</li>
+            <li>Routine Check - Sunday, 2025-04-13</li>
+            <li>Blood Test - Monday, 2025-04-19</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nurse">
+        <div class="nurse-info">
+          <strong>Huda Salem Faraj Al-Dosari</strong><br>
+          <small>Appointments Helped With:</small>
+          <ul>
+            <li>Blood Pressure Measurement - Saturday, 2025-04-12</li>
+            <li>Physical Therapy - Monday, 2025-04-14</li>
+            <li>X-Ray - Tuesday, 2025-04-15</li>
+            <li>Consultation - Thursday, 2025-04-17</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>📞 +966 5XXXXXXX | ✉️ <a href="mailto:contact@myuniversitydoctor.com">contact@myuniversitydoctor.com</a></p>
+  </footer>
+</body>
+</html>

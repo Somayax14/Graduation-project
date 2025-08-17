@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dr. Nora's Profile</title>
+  <style>
+   body {
+      font-family: 'Segoe UI', Tahoma;
+      margin: 0;
+      background: linear-gradient(to bottom right, #EAF4F8, #D6EAF3);
+    }
+
+    header {
+      background-color: #5389A6;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .Current-page {
+      color:#b2ebf2;
+    }
+
+
+    .co{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .auth-button {
+  background-color: #c24949; /* اللون الأخضر */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+      padding: 10px;
+      margin-right: 40px;
+
+}
+
+.auth-button:hover {
+  background-color: #9b3434; /* تغيير اللون عند التمرير */
+}
+
+    
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight:initial;
+    }
+
+    nav a:hover {
+      color:#b2ebf2 ;
+    }
+
+
+
+    main {
+      max-width: 950px;
+      margin: 30px auto;
+      background: #fff;
+      margin-bottom: 10px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      color: #2c4d5a;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .info p, .nurse p {
+      margin: 6px 0;
+      color: #444;
+    }
+
+    .data-boxes {
+      display: flex;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .box {
+      background-color: #eef5f6;
+      padding: 15px 20px;
+      border-radius: 10px;
+      flex: 1;
+      text-align: center;
+    }
+
+    .box strong {
+      display: block;
+      font-size: 1.4em;
+      margin-bottom: 5px;
+      color: #305b68;
+    }
+
+    .certificates ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    .nurse-section {
+      background-color: #f6fafd;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .nurse strong {
+      font-size: 1.1em;
+      color: #2b5460;
+    }
+  
+ .reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.review {
+  width: 250px;
+  height: 250px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+  color: #2c4d5a;
+  font-size: 16px;
+}
+
+.review:hover {
+  transform: scale(1.02);
+}
+
+.review .stars {
+  color: gold;
+  font-size: 18px;
+}
+
+.reviews-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+}
+    .footer {
+      background-color: #5389A6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #A6DCEE;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class=".main-h">
+    <img src="Logo.jpg" alt="Logo" class="logo">
+    <nav>
+      <a class="Current-page" href="Doctor-home.html">Home</a>
+      <a  href="doctor-content.html">content</a>
+      <a href="Doctor-appointment.html">appointment</a>
+      <a href="Doctor-consultation.html"> consultation</a>
+      <a href="Doctor-event.html">Activities and Events</a>
+      <a href="Doctor-opp.html"> Training & volunteer</a>
+      <a href="Doctor-records.html">Records</a>
+    </nav>
+      <div class="co">
+<a href="/login.html"> <button class="auth-button" id="logoutButton">Logout</button>
+</a>
+</div>
+ </header>
+
+
+  <main>
+
+    <section class="section">
+      <h2>General Information</h2>
+      <div class="info">
+        <p><strong>Specialty:</strong> Family Medicine</p>
+        <p><strong>Years of Experience:</strong> 10</p>
+        <p><strong>Email:</strong> nora.clinic@email.com</p>
+        <p><strong>Employee ID:</strong> DR1042</p>
+        <p><strong>Clinic Location:</strong> Jazan General Medical Center</p>
+        <p><strong>Phone Number:</strong> +966-55-1234567</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Activity Overview</h2>
+      <div class="data-boxes">
+        <div class="box">
+          <strong>132</strong>
+          Consultations Initiated
+        </div>
+        <div class="box">
+          <strong>87</strong>
+          Appointment Requests
+        </div>
+        <div class="box">
+          <strong>23</strong>
+          Medical Articles Published
+        </div>
+      </div>
+    </section>
+
+    <section class="section certificates">
+      <h2>Educational Qualifications</h2>
+      <ul>
+        <li>MBBS – King Saud University, Riyadh</li>
+        <li>Board Certified in Family Medicine</li>
+        <li>Advanced Cardiac Life Support (ACLS)</li>
+        <li>Community Health Leadership Program – 2023</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Assisting Nurses</h2>
+
+      <div class="nurse-section">
+        <div class="nurse">
+          <strong>Layan Al-Malki</strong>
+          <p>Position: Senior Nurse</p>
+          <p>Experience: 4 years</p>
+          <p>Employee ID: NR2045</p>
+          <p>Email: layan.nurse@email.com</p>
+        </div>
+      </div>
+
+      <div class="nurse-section">
+        <div class="nurse">
+          <strong>Wafa Hakami</strong>
+          <p>Position: Assistant Nurse</p>
+          <p>Experience: 2 years</p>
+          <p>Employee ID: NR2070</p>
+          <p>Email: wafa.nurse@email.com</p>
+        </div>
+      </div>
+
+    </section>
+
+  
+    
+
+  </main>
+
+<!-- قسم مراجعات المرضى -->
+<section class="reviews-section">
+  <h2 class="reviews-title">Patient Reviews</h2>
+  <div class="reviews-container">
+    <div class="review">
+      <p><strong>F****i</strong></p>
+      <p>"Dr. Sarah was very professional and kind. She explained everything clearly and made me feel at ease."</p>
+      <p class="stars">★★★★★</p>
+    </div>
+    <div class="review">
+      <p><strong>N****i</strong></p>
+      <p>"Excellent care! I appreciate how attentive and understanding the doctor was. Highly recommend."</p>
+      <p class="stars">★★★★★</p>
+    </div>
+    <div class="review">
+      <p><strong>R****i</strong></p>
+      <p>"Such a wonderful experience. The clinic was clean, and the staff were welcoming. Dr. Noura is the best!"</p>
+      <p class="stars">★★★★★</p>
+    </div>
+    <div class="review">
+      <p><strong>H****y</strong></p>
+      <p>"Very smooth process. I didn’t have to wait long, and the doctor was very thorough and respectful."</p>
+      <p class="stars">★★★★★</p>
+    </div>
+    <div class="review">
+      <p><strong>M****i</strong></p>
+      <p>"I felt very comfortable throughout the whole appointment. Thank you Dr. Sarah!"</p>
+      <p class="stars">★★★★★</p>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+    <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAADq0lEQVR4nO2WXWgVRxTHN9oPoQjCTXbmbAKKhpDcmtomYDX1ztwkhqThGqx0mybVJk3QCiF+oNxLP2Js2ia3oXp3k1BpYr9portp+1LEJykIGkWhKIg+RFsINahPsVI/kpwys7vpkgfhxk2eemC48N+985v/7JxzRlH+jzmEppWHACJvUco/BODbs7I4VeYzCOErCPDvKPCHFDj6xkMC/D1FUTIChwKwHRTYXQEiwG9R4H0EIs0UWDcFPiEXQNlAkPAMSlmPBFL+gAA/SEjFc/4XKGUFhLIxB873B0KllCed7WTjqsrX+Z/hz70htMxWtMwfzne3DQJEH4kFPLFrSvlexym7I1zNANvbF6FtJtAyJ9A20RtFBVWYnR2d0nV98ZyhqhYtp8CnKbC//U4dl8YJP1CM4fh+edA2vbIF0TZ65gQNhUqWEmB/uN9Mn4H++Hkm2ubV2dDRLz7BVSvKhVs899kBRx8+vDJtMAH+pXtKhzxtr/529tmutssebNoy8MFQCm9+lcTS4hrp9lDzzv8WZPUWpgWlNMLcLR4XhcLRNmQVh6smQIviWH+XnDihv4OaFp3J5a0ba3HKMjzwmXTNZlBgI2IiFXidJ65dXX1JaE1V9TOTf79nN5a8EEP20iZMNr6L94cOu1DjLg715qVFVTVW4xQIdsFLiUhRrEVokRdjvsnFVpoX0TJHZ33vKbTM19N1qxBgv0kw4TFH4U+tyauU1Wok2eYHJLz/4E/GarSMOFqGicMplj6UlD7vVqdriqIsElpTZd1uodWWvuF3+m3akz8uCLCP3W2Oe9quzdtGhWbH93ng2/hLapkSZFDKfpeHSt0g8w8ts/hAfbM8seJ39hYHEqFQyVIKbJICu+FpaJvG9SOdmL+qQsLjeuP0+MCnJFBwTk5ZtuyplPX7avGYcHnF7MA1+ZVuvrJuJehQ1TISDoefkWCrZ60/TW4c6cRwbgWCxifFe8p8BdpGw+x63FKzVboeaGntDvyGoWp8owv+yA+dPG7gy4XVKErmX0e7ptFK1QaELX7auUexm7m5Vc+iZfT5wb9+kJBua6O6p50OCKyIpn/M7UiD418nuzyoqM3V6zdL8KmO970icjIwsKqWEZFOApCTE723vboe+1tasaHiTQl9dd1rshW64PTr8eMCgGeKXkwov+e/voouJE62uwtXRbop8xHLl/MlelRvONS8888TbQn8Z9DXleyeLcpCBFqp9WgbnWgb36CVqlkQaJDxL8bPWHXkVfSxAAAAAElFTkSuQmCC" alt="phone-disconnected"> +966 5XXXXXXX | <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="mail"> <a href="mailto:contact@mycollagedoctor.com">contact@mycollagedoctor.com</a></p>
+  </footer>
+  
+  
+</body>
+</html>
