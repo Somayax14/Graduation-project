@@ -9,5 +9,5 @@ This is my graduation project website  " My Collage Doctor " by HTML, CSS and Ja
    user "102"  password: "123456780
   * Nurse pages
    user "2011" password: "987654320
-    * Admin pages
+  * Admin pages
    user "111"  password: "111111111
